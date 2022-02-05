@@ -1,0 +1,193 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    letter-spacing: 0.03rem;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    background-color: $LightGrayishBlue;
+    overflow: hidden;
+    color: $White;
+    @include breakpoint-down(mobile){
+        overflow: auto;
+    }
+}
+
+p {
+    margin: 0 auto;
+    font-size: 0.8em;
+    text-transform: none;
+    opacity: 75%;
+    color: $White;
+    font-weight: 500;
+}
+
+h3 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.name {
+    opacity: 100%;
+}
+
+.verified {
+    opacity: 50%;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 5rem auto;
+    height: 100%;
+    width: 80vw;
+
+    @include breakpoint-down(mobile){
+        display: flex;
+        flex-direction: column;
+        //max-width: 100vw;
+        //max-height: 100vh;
+    }
+}
+
+.first-col-container {
+    display: flex;
+    flex-direction: column;    
+
+    @include breakpoint-down(mobile){
+        margin-bottom: 0;
+    }
+}
+
+.first-col-container, .last-container{
+    max-height: 32.5rem;
+    @include breakpoint-down(mobile){
+        max-height: 100%;
+      }
+}
+
+.first-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    @include breakpoint-down(mobile){
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+}
+
+.second-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    @include breakpoint-down(mobile){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+}
+
+.last-container {
+    @include breakpoint-down(mobile){
+        margin-top: 0;
+    }
+
+}
+
+.last-container .profile {
+    height: 30.85rem;
+    @include breakpoint-down(mobile){
+        height: fit-content;
+    }
+}
+
+.last-container .profile p{
+    margin: 0 auto;
+}
+
+
+.first-container , .second-container{
+    height: 16rem;
+    overflow: hidden;
+
+    @include breakpoint-down(mobile){
+        display: flex;
+        flex-direction:column;
+        overflow: hidden;
+        height: auto;
+    }
+}
+
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+    padding: 0.5rem 0.7rem 1rem 0.7rem;
+    height: 15rem;
+    overflow: hidden;
+    width:fit-content;
+    border-radius: 0.4rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem;
+   
+    @include breakpoint-down(mobile){
+        height: auto;
+    }
+}
+
+.person-items{
+    display: flex;
+    align-items: center;
+    //height: 2rem;
+    margin: 0.5rem 0.5rem 0.3rem 0.5rem;
+}
+
+.person-items img{
+    margin: 0;
+    width: 2.5rem;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid $LightGray;
+}
+
+.person-items .info{
+    margin-left: 0.5rem; 
+}
+
+.text-area{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 98%;
+    margin: -0.5rem 0.5rem 0.125rem 0.5rem;
+}
+
+.item__one{
+    background-color: $ModerateViolet;
+} 
+
+.item__two {
+    background-color: $VeryDarkGrayishBlue;
+}
+
+.item__four{
+    background-color: $VeryDarkBlackishBlue;
+}
+
+.item__three, .item__five {
+    background-color: $White;
+    color: $VeryDarkBlackishBlue;
+}
+
+.item__three p, .item__five p {
+    color: $VeryDarkBlackishBlue;
+}

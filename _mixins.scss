@@ -1,0 +1,15 @@
+//- Mobile: 375px / 23.44rem
+//- Desktop: 1440px / 90rem
+
+@media (min-width: 60em){
+    //styles
+};
+
+// 450px
+$breakpoints-down: ("mobile": "28em");
+
+@mixin breakpoint-down($size){
+    @media(max-width: map-get($breakpoints-down, $size)){
+        @content;
+    }
+}
